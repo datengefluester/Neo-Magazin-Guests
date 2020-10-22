@@ -1,6 +1,6 @@
 ---
 title: "Guests of Neo Magazin (Royale)"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, echo = FALSE}
