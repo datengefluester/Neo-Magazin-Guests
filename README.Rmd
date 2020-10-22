@@ -84,7 +84,7 @@ data %>%
   labs(title = "Wer war bei Böhmermann zu Gast?", subtitle="Anteil der Gäste nach Beruf und Jahr in Prozent*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(), plot.title.position = "plot", axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = c(0.87, 0.92), legend.text=element_text(size=5),legend.title=element_text(size=7), legend.key.height= unit(0.4,"line"),legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
 
-ggsave("categories.jpg",width=4, height=3)
+ggsave("README_figs/categories.jpg",width=4, height=3)
 ```
 
 ### 2. guests per episode per year
@@ -96,7 +96,7 @@ ggplot(data, aes(x=year, y=guests_episode,group=1))  +
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25) +
   labs(title = "Mit wie vielen Gästen unterhielt sich Böhmermann?", subtitle="Gäste pro Folge nach Jahr", caption = "Quelle: wikipedia") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(),plot.title.position = "plot",  axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
-ggsave("guests.jpg",width=4, height=3)
+ggsave("README_figs/guests.jpg",width=4, height=3)
 ```
 
 ### 3. mean age of guests per year
@@ -108,7 +108,7 @@ ggplot(data, aes(x=year, y=mean_age,group=1))+
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25, color="#656565") +
   labs(title = "Werden die Gäste Böhmermanns jünger?", subtitle="Durchschnittsalter der Gäste nach Jahr*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(), plot.title.position = "plot", axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
-ggsave("age.jpg",width=4, height=3)
+ggsave("README_figs/age.jpg",width=4, height=3)
 ```
 
 ### 4. percentage of women of total guests per year
@@ -120,7 +120,7 @@ ggplot(data, aes(x=year, y=women,group=1)) +
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25, color="#656565") +
   labs(title = "Diskriminiert Böhermann Frauen?", subtitle="Anteil Frauen an der Gesamtzahl der Gäste in Prozent*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(), plot.title.position = "plot", axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
-ggsave("women.jpg",width=4, height=3)
+ggsave("README_figs/women.jpg",width=4, height=3)
 ```
 
 ### 5. generations of guests per year (not included in the text)
@@ -135,5 +135,5 @@ data %>%
   scale_fill_manual("Generation", values = c("traditionals"="#009E73","babyboomer"="#F0E442","gen_x"="#0072B2","millenials"="#D55E00","gen_z"="#CC79A7"),labels=c("traditionals"="Traditionals (1922-1955)","babyboomer"="Babyboomer (1956-1965)","gen_x"="Generation X (1966-1980)","millenials"="Millenials (1981-1995)","gen_z"="Generation Z (ab 1995)")) +
   labs(title = "Welche Generationen waren bei Böhmermann zu Gast?", subtitle="Anteil der Gäste nach Generation*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(), plot.title.position = "plot", axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.text=element_text(size=5),legend.title=element_text(size=7), legend.key.height= unit(0.4,"line"),legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
-ggsave("generations.jpg",width=4, height=3)
+ggsave("README_figs/generations.jpg",width=4, height=3)
 ```
