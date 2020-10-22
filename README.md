@@ -88,10 +88,6 @@ data %>%
 
 ![](README_figs/classification-1.png)<!-- -->
 
-``` r
-ggsave("README_figs/categories-1.jpg",width=4, height=3)
-```
-
 ### 2\. guests per episode per year
 
 ``` r
@@ -105,10 +101,6 @@ ggplot(data, aes(x=year, y=guests_episode,group=1))  +
 ```
 
 ![](README_figs/guests-1.png)<!-- -->
-
-``` r
-ggsave("README_figs/guests-1.jpg",width=4, height=3)
-```
 
 ### 3\. mean age of guests per year
 
@@ -124,10 +116,6 @@ ggplot(data, aes(x=year, y=mean_age,group=1))+
 
 ![](README_figs/age-1.png)<!-- -->
 
-``` r
-ggsave("README_figs/age-1.jpg",width=4, height=3)
-```
-
 ### 4\. percentage of women of total guests per year
 
 ``` r
@@ -141,10 +129,6 @@ ggplot(data, aes(x=year, y=women,group=1)) +
 ```
 
 ![](README_figs/women-1.png)<!-- -->
-
-``` r
-ggsave("README_figs/women-1.jpg",width=4, height=3)
-```
 
 ### 5\. generations of guests per year (not included in the text)
 
@@ -162,7 +146,3 @@ data %>%
 ```
 
 ![](README_figs/generations-1.png)<!-- -->
-
-``` r
-ggsave("README_figs/generations-1.jpg",width=4, height=3)
-```
