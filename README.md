@@ -79,7 +79,7 @@ data %>%
   annotate("text", label = "Neo Magazin Royale", x = 2015.3, y = 95, size = 2, colour = "black") +
   annotate("text", label = "Neo Magazin", x = 2013.3, y = 95, size = 2, colour = "black") +
   scale_y_continuous(limits = c(0, 100.1), breaks = c(seq(25,100,25)) , expand = c(0, 0),  labels=c("25"="25","50"="50","75"="75","100" =       "100%")) +
-  scale_x_continuous(breaks = seq(2013, 2019, by = 2), limits=c(2013,2019)) +
+  scale_x_continuous(breaks = seq(2013, 2019, by = 1), limits=c(2013,2019),  labels=c("2013"="2013","2014"="14","2015"="15","2016"="16","2017"="17","2018"="18","2019"="19")) +
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25, color="#656565") +
   scale_color_manual(breaks=c("entertainment","media","politics","others"), values=c("#E69F00", "#56B4E9", "#009E73", "#F0E442")  ,labels = c("Unterhaltung", "Medien", "Politik","Andere"), name = "Kategorie") + 
   labs(title = "Wer war bei Böhmermann zu Gast?", subtitle="Anteil der Gäste nach Beruf und Jahr in Prozent*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
@@ -94,7 +94,7 @@ data %>%
 ggplot(data, aes(x=year, y=guests_episode,group=1))  +   
   geom_line(aes(group=1), color="#009E73") +
   scale_y_continuous(limits = c(0, 2.1),breaks = c(seq(0,2,0.5)), expand = c(0, 0), labels=c("0.0" = "", "0.5"="0,5", "1.0"="1", "1.5"= "1,5", "2.0"="2 Gäste")) +
-  scale_x_continuous(breaks = seq(2013, 2019, by = 2), limits=c(2013,2019)) +
+ scale_x_continuous(breaks = seq(2013, 2019, by = 1), limits=c(2013,2019), labels=c("2013"="2013","2014"="14","2015"="15","2016"="16","2017"="17","2018"="18","2019"="19")) +
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25) +
   labs(title = "Mit wie vielen Gästen unterhielt sich Böhmermann?", subtitle="Gäste pro Folge nach Jahr", caption = "Quelle: wikipedia") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(),plot.title.position = "plot",  axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
@@ -108,7 +108,7 @@ ggplot(data, aes(x=year, y=guests_episode,group=1))  +
 ggplot(data, aes(x=year, y=mean_age,group=1))+
   geom_line(aes(group=1), color="#009E73") +
   scale_y_continuous(limits = c(30, 50.1), breaks = c(seq(30,50,5)) , expand = c(0, 0), labels=c("30"="","35"="35","40"="40","45"="45","50"="50 Jahre")) +
-  scale_x_continuous(breaks = seq(2013, 2019, by = 2), limits=c(2013,2019)) +
+  scale_x_continuous(breaks = seq(2013, 2019, by = 1), limits=c(2013,2019),  labels=c("2013"="2013","2014"="14","2015"="15","2016"="16","2017"="17","2018"="18","2019"="19")) +
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25, color="#656565") +
   labs(title = "Werden die Gäste Böhmermanns jünger?", subtitle="Durchschnittsalter der Gäste nach Jahr*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(), plot.title.position = "plot", axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
@@ -122,7 +122,7 @@ ggplot(data, aes(x=year, y=mean_age,group=1))+
 ggplot(data, aes(x=year, y=women,group=1)) + 
   geom_line(aes(group=1), color="#009E73") +
   scale_y_continuous(limits = c(0, 50.1), breaks = c(seq(10,50,10)) , expand = c(0, 0), labels=c("10"="10","20"="20","30"="30","40"="40","50"   = "50%")) +
-  scale_x_continuous(breaks = seq(2013, 2019, by = 2), limits=c(2013,2019)) +
+  scale_x_continuous(breaks = seq(2013, 2019, by = 1), limits=c(2013,2019),  labels=c("2013"="2013","2014"="14","2015"="15","2016"="16","2017"="17","2018"="18","2019"="19")) +
   geom_vline(xintercept=c(2014.5), linetype="dotted", size= 0.25, color="#656565") +
   labs(title = "Diskriminiert Böhermann Frauen?", subtitle="Anteil Frauen an der Gesamtzahl der Gäste in Prozent*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
   hp_theme() + theme(axis.text= element_text(size=7.5), axis.title.x = element_blank(), plot.title.position = "plot", axis.title.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(size=.2, color="#656565"), axis.line.x=element_line( size=.3, color="black"), legend.position = "right", legend.key = element_blank(), axis.ticks.y = element_blank(), axis.ticks.x =element_line( size=.3, color="black"), plot.caption=element_text(size=5), axis.text.x=element_text(color="black"))
@@ -138,7 +138,7 @@ data %>%
   gather(generation ,percent, traditionals:gen_z) %>%
   ggplot(aes(fill=generation, y=percent, x=year)) + 
   geom_bar(position="fill", stat="identity")+
-  scale_x_continuous(breaks = seq(2013, 2019, by = 2)) +
+  scale_x_continuous(breaks = seq(2013, 2019, by = 1), limits=c(2012,2020),  labels=c("2013"="2013","2014"="14","2015"="15","2016"="16","2017"="17","2018"="18","2019"="19")) +
   scale_y_continuous(expand = c(0,0),breaks = c(seq(0,1,0.25)) , labels = c("0","25","50","75","100%")) +
   scale_fill_manual("Generation", values = c("traditionals"="#009E73","babyboomer"="#F0E442","gen_x"="#0072B2","millenials"="#D55E00","gen_z"="#CC79A7"),labels=c("traditionals"="Traditionals (1922-1955)","babyboomer"="Babyboomer (1956-1965)","gen_x"="Generation X (1966-1980)","millenials"="Millenials (1981-1995)","gen_z"="Generation Z (ab 1995)")) +
   labs(title = "Welche Generationen waren bei Böhmermann zu Gast?", subtitle="Anteil der Gäste nach Generation*", caption = "Quelle: wikipedia \n *der Gäste mit Wikipediaeintrag.") +
