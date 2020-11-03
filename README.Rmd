@@ -86,7 +86,7 @@ data %>%
 ```
 
 ```{r category_pic,echo=FALSE, eval=FALSE}
-ggsave("hp_pic/category.jpg",width=4, height=3)
+ggsave("./HP_pic/category.jpg",width=4, height=3)
 ```
 
 ### 2. guests per episode per year
@@ -101,7 +101,7 @@ ggplot(data, aes(x=year, y=guests_episode,group=1))  +
 ```
 
 ```{r guest_pic,echo=FALSE, eval=FALSE}
-ggsave("hp_pic/guest_pic.jpg",width=4, height=3)
+ggsave("./HP_pic/guest_pic.jpg",width=4, height=3)
 ```
 
 
@@ -117,7 +117,7 @@ ggplot(data, aes(x=year, y=mean_age,group=1))+
 ```
 
 ```{r age_pic,echo=FALSE, eval=FALSE}
-ggsave("hp_pic/age.jpg",width=4, height=3)
+ggsave("./HP_pic/age.jpg",width=4, height=3)
 ```
 
 ### 4. percentage of women of total guests per year
@@ -132,7 +132,7 @@ ggplot(data, aes(x=year, y=women,group=1)) +
 ```
 
 ```{r women_pic,echo=FALSE, eval=FALSE}
-ggsave("hp_pic/women.jpg",width=4, height=3)
+ggsave("./HP_pic/women.jpg",width=4, height=3)
 ```
 
 ### 5. generations of guests per year (not included in the text)
@@ -150,5 +150,5 @@ data %>%
 ```
 
 ```{r generation_pic, echo=FALSE, eval=FALSE}
-ggsave("hp_pic/generation.jpg",width=4, height=3)
+ggsave("./HP_pic/generation.jpg",width=4, height=3)
 ```
